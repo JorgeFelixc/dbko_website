@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+<category name="Menu">
+<item href="notes.php">Home</item>
+<item href="account.php">Account</item>
+<item href="ranks.php?sort=level">Ranks</item>
+<item href="characters.php">Players</item>
+<item href="guilds.php">Guilds</item>
+<item href="bans.php">Ban List</item>
+</category>
+
+<category name="Informations">
+<item href="items.php">Equipaments</item>
+<item href="comandos.php">Comandos</item>
+<item href="download.php">Downloads</item>
+</category>
+</navigation>
