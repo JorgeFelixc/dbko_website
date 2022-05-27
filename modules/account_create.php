@@ -131,7 +131,7 @@ else{
 	$form->addInput('password','password');
 	$form->addInput('confirm','password');
 	$form->addCaptcha();
-	$form->addClose('Cancel');
+	// $form->addClose('Cancel');
 	$form->addSubmit('Next >>');
 	$form->show();
 }?>

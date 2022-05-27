@@ -104,9 +104,9 @@ include ("header.inc.php");
 			</form>
 		</div>
 		<div id="wrapper-register" class="wrapper-login">
-			<!-- <h1>Want a new account?</h1>
-			<button class="btn-primary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)">Create a new account</button> -->
-			<h1>Create Account</h1>
+			<h1>Want a new account?</h1>
+			<button class="btn-primary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)">Create a new account</button>
+			<!-- <h1>Create Account</h1>
 			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account.php',getParams(document.getElementById('newaccount')),true)" method="post">
 			<div class="wrapper-form">
 				<label>Email</label>			
@@ -123,7 +123,7 @@ include ("header.inc.php");
 			<div class="wrapper-actions">
 				<input class="btn-primary"  type="submit" name="register_submit" value="Next >>"> 
 			</div>
-			</form>
+			</form> -->
 		</div>
 			<!-- <fieldset>
 				<legend>More Options</legend>

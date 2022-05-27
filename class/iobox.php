@@ -51,7 +51,12 @@ public function addCaptcha(){
 public function addInput($name, $type = 'text', $value = '', $length = 100, $readonly = false){
 	if ($readonly) $readonly = ' readonly="readonly"';
 	else $readonly = '';
-	$this->elements[]= '<input id="'.$this->name.'__'.$name.'" name="'.$this->name.'__'.$name.'" type="'.$type.'" maxlength="'.$length.'" value="'.$value.'"'.$readonly.'/>&nbsp;<label for="'.$this->name.'__'.$name.'">- '.ucfirst($name).'</label>';
+	$this->elements[]= '
+	<div class="wrapper-form">
+		<label for="'.$this->name.'__'.$name.'">- '.ucfirst($name).'</label>
+		<input id="'.$this->name.'__'.$name.'" name="'.$this->name.'__'.$name.'" type="'.$type.'" maxlength="'.$length.'" value="'.$value.'"'.$readonly.'/>
+	</div>
+	';
 }
 public function addCheckBox($name, $check = false){
 	if ($check) $check = ' checked="checked"';
@@ -77,7 +82,7 @@ public function addCode($code){
 	$this->elements[]= $code;
 }
 public function addLabel($code){
-	$this->label = '<legend>'.$code.'</legend>';
+	$this->label = '<h1>'.$code.'</h1>';
 }
 public function getCode(){
 	if (isset($_POST['ajax']))
