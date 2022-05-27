@@ -93,7 +93,7 @@ public function getCode(){
 		$code.= $element
 	// $code.= '<hr style="margin: 10px 2px 2px 2px; padding: 0;"/> | ';
 	foreach ($this->buttons as $button)
-		$code.= $button
+		$code.= $button;
 	// $code.= '</form></fieldset></td></tr></table>';
 	return $code;
 }
