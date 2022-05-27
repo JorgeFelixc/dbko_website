@@ -17,6 +17,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 include ("../include.inc.php");
+include ("../class/iobox.php");
 
 
 //retrieve post data
@@ -27,7 +28,7 @@ $form->target = $_SERVER['PHP_SELF'];
 // $form->addInput('email');
 // $form->addInput('password','password');
 // $form->addInput('confirm','password');
-// $form->addCaptcha();
+$form->addCaptcha();
 // $form->addClose('Cancel');
 // $form->addSubmit('Next >>');
 //check if any data was submited
