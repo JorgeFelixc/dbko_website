@@ -86,10 +86,10 @@ public function addCode($code){
 	$this->elements[]= $code;
 }
 public function addLabel($code){
-	$this->elements[] = '<h1>'.$code.'</h1>';
+	$this->label = '<h1>'.$code.'</h1>';
 }
 public function getCode(){
-	$code = '';
+	$code = $label;
 	if (isset($_POST['ajax']))
 		$code = '<form id="'.$this->name.'" action="javascript:ajax(\'wrapper-register\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post" onmouseup="Cookies.create(\''.$this->name.'\',document.getElementById(\''.$this->name.'\').style.left,1);Cookies.create(\''.$this->name.'\',document.getElementById(\''.$this->name.'\').style.top,1);">';
 	else
