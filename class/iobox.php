@@ -86,10 +86,10 @@ public function addCode($code){
 	$this->elements[]= $code;
 }
 public function addLabel($code){
-	$this->label = '<h1>'.$code.'</h1>';
+	$this->elements[] = '<h1>'.$code.'</h1>';
 }
 public function getCode(){
-	$code = $label;
+	$code = '';
 	if (isset($_POST['ajax']))
 		$code = '<form id="'.$this->name.'" action="javascript:ajax(\'wrapper-register\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post" onmouseup="Cookies.create(\''.$this->name.'\',document.getElementById(\''.$this->name.'\').style.left,1);Cookies.create(\''.$this->name.'\',document.getElementById(\''.$this->name.'\').style.top,1);">';
 	else
@@ -124,6 +124,7 @@ public function getBool($attr){
 	return $this->attrs[$attr] === 'on';
 }
 public function exists(){
+	echo $this->$attrs;
 	if (isset($this->attrs)) return true;
 	else return false;
 }
