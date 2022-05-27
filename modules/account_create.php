@@ -28,7 +28,8 @@ if ($form->exists()){
 	//image verification
 	if ($form->validated()){
 		//email formating rules
-		if (AAC::ValidEmail($form->attrs['email'])){
+		$globals = new AAC();
+		if ($globals->ValidEmail($form->attrs['email'])){
 
 			$account = new Account();
 			do 
@@ -36,7 +37,7 @@ if ($form->exists()){
 			while ($account->exists());
 			//set account atrributes
 			$accno = $account->getAttr('accno');
-			if ($form->attrs['password'] == $form->attrs['confirm'] && AAC::ValidPassword($form->attrs['password']))
+			if ($form->attrs['password'] == $form->attrs['confirm'] && $globals->ValidPassword($form->attrs['password']))
 				$password = $form->attrs['password'];
 			else
 				$password = substr(str_shuffle('qwertyuipasdfhjklzxcvbnm123456789'), 0, 6);
