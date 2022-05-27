@@ -105,8 +105,8 @@ include ("header.inc.php");
 		</div>
 		<div id="wrapper-register" class="wrapper-login">
 			<h1>Create Account</h1>
-			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)" method="post">
-			<!-- <form id="newaccount" action=acc"" method="post"> -->
+			<!-- <form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)" method="post"> -->
+			<form id="register_submit" action="/modules/account?redirect=<?php echo htmlspecialchars($_GET['redirect'])?>" method="post">
 			<div class="wrapper-form">
 				<label>Email</label>			
 				<input class="textfield" id="newaccount__email" name="newaccount__email" type="text" maxlength="100" value="">
@@ -120,7 +120,7 @@ include ("header.inc.php");
 				<input class="textfield" id="newaccount__confirm" name="newaccount__confirm" type="password" maxlength="100" value="">
 			</div>
 			<div class="wrapper-actions">
-				<input class="btn-primary"  type="submit" name="newaccount__newaccount" value="Next >>"> 
+				<input class="btn-primary"  type="submit" name="register_submit" value="Next >>"> 
 			</div>
 			</form>
 		</div>
