@@ -104,8 +104,8 @@ include ("header.inc.php");
 			</form>
 		</div>
 		<div id="wrapper-register" class="wrapper-login">
-			<h1>Want a new account?</h1>
-			<button class="btn-primary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)">Create a new account</button>
+			<!-- <h1>Want a new account?</h1>
+			<button class="btn-primary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)">Create a new account</button> -->
 			<!-- <h1>Create Account</h1>
 			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account.php',getParams(document.getElementById('newaccount')),true)" method="post">
 			<div class="wrapper-form">
@@ -124,6 +124,24 @@ include ("header.inc.php");
 				<input class="btn-primary"  type="submit" name="register_submit" value="Next >>"> 
 			</div>
 			</form> -->
+			<h1>Create Account</h1>
+			<form id="newaccount">
+			<div class="wrapper-form">
+				<label>Email</label>			
+				<input class="textfield" id="newaccount__email" name="create_acc" type="text" maxlength="100" value="">
+			</div>	
+			<div class="wrapper-form">
+				<label>Password</label>
+				<input class="textfield" id="newaccount__password" name="create_acc" type="password" maxlength="100" value="">
+			</div>	
+			<div class="wrapper-form">
+				<label>Confirm your Password</label>
+				<input class="textfield" id="newaccount__confirm" name="create_acc" type="password" maxlength="100" value="">
+			</div>
+			<div class="wrapper-actions">
+				<button class="btn-primary" onclick="javascript:postForm('/modules/account.php', 'create_acc')" > Create Account </button> 
+			</div>
+			</form>
 		</div>
 			<!-- <fieldset>
 				<legend>More Options</legend>

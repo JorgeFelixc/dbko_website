@@ -94,7 +94,7 @@ public function getCode(){
     echo "Param: $param_name; Value: $param_val<br />\n";
 }
 	if (isset($_POST['ajax']))
-		$code = '<form id="'.$this->name.'" action="javascript:ajax(\'wrapper-register\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post" onmouseup="Cookies.create(\''.$this->name.'\',document.getElementById(\''.$this->name.'\').style.left,1);Cookies.create(\''.$this->name.'\',document.getElementById(\''.$this->name.'\').style.top,1);">';
+		$code = '<form id="'.$this->name.'" action="javascript:ajax(\'wrapper-register\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post" >';
 	else
 		$code = '<div id="iobox" class="iobox"><fieldset>'.$this->label.'<form id="'.$this->name.'" action="'.htmlspecialchars($this->target).'" method="post">';
 	
