@@ -22,13 +22,13 @@ include ("../include.inc.php");
 $form = new Form('newaccount');
 // $form = new IOBox('newaccount');
 $form->target = $_SERVER['PHP_SELF'];
-$form->addLabel('Create Account');
-$form->addInput('email');
-$form->addInput('password','password');
-$form->addInput('confirm','password');
-$form->addCaptcha();
-$form->addClose('Cancel');
-$form->addSubmit('Next >>');
+// $form->addLabel('Create Account');
+// $form->addInput('email');
+// $form->addInput('password','password');
+// $form->addInput('confirm','password');
+// $form->addCaptcha();
+// $form->addClose('Cancel');
+// $form->addSubmit('Next >>');
 
 //check if any data was submited
 if ($form->exists()){
