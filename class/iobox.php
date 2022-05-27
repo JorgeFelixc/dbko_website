@@ -89,11 +89,13 @@ public function getCode(){
 	// 	$code = '<table cellspacing="10px" onmouseup="Cookies.create(\'iobox_x\',document.getElementById(\'iobox\').style.left,1);Cookies.create(\'iobox_y\',document.getElementById(\'iobox\').style.top,1);" style="visibility:hidden" id="iobox" class="draggable"><tr><td><fieldset>'.$this->label.'<form id="'.$this->name.'" action="javascript:ajax(\'form\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post">';
 	// else
 	// 	$code = '<div id="iobox" class="iobox"><fieldset>'.$this->label.'<form id="'.$this->name.'" action="'.htmlspecialchars($this->target).'" method="post">';
-	foreach ($this->elements as $element)
+	foreach ($this->elements as $element){
 		$code.= $element
+	}
 	// $code.= '<hr style="margin: 10px 2px 2px 2px; padding: 0;"/> | ';
-	foreach ($this->buttons as $button)
+	foreach ($this->buttons as $button){
 		$code.= $button;
+	}
 	// $code.= '</form></fieldset></td></tr></table>';
 	return $code;
 }
