@@ -109,6 +109,7 @@ if ($form->exists()){
 	if (!empty($error)){
 		//create new message
 		$msg = new IOBox('message');
+		$msg->target = $_SERVER['PHP_SELF'];
 		$msg->addMsg($error);
 		$msg->addReload('<< Back');
 		$msg->addClose('OK');
@@ -126,5 +127,5 @@ else{
 	$form->addCaptcha();
 	// $form->addClose('Cancel');
 	$form->addSubmit('Next');
-	$form->show();
+	// $form->show();
 }?>

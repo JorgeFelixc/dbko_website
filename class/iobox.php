@@ -90,9 +90,6 @@ public function addLabel($code){
 }
 public function getCode(){
 	$code = '';
-	foreach ($_POST as $param_name => $param_val) {
-    echo "Param: $param_name; Value: $param_val<br />\n";
-}
 	if (isset($_POST['ajax']))
 		$code = '<form id="'.$this->name.'" action="javascript:ajax(\'wrapper-register\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post" >';
 	else
@@ -117,7 +114,6 @@ class Form
 public $attrs;
 public function __construct($name){
 		foreach( array_keys($_POST) as $key){
-			// echo /^'.$name.'__/',$key;
 			if (preg_match('/^'.$name.'__/',$key)) {
 				$p = explode('__', $key);
 				$this->attrs[$p[1]] = trim($_POST[$key]);
