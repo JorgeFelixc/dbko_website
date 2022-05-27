@@ -21,6 +21,8 @@ include ("../include.inc.php");
 
 //retrieve post data
 $form = new Form('newaccount');
+$form->target = $_SERVER['PHP_SELF'];
+
 
 //check if any data was submited
 if ($form->exists()){
