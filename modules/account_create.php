@@ -29,10 +29,13 @@ $form->target = $_SERVER['PHP_SELF'];
 // $form->addCaptcha();
 // $form->addClose('Cancel');
 // $form->addSubmit('Next >>');
-
+echo "Im entrying ajsdlkjasd";
 //check if any data was submited
 if ($form->exists()){
 	//image verification
+
+	echo "Captcvha?";
+
 	if ($form->validated()){
 		//email formating rules
 		if (AAC::ValidEmail($form->attrs['email'])){
