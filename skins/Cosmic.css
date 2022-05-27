@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,400;0,800;1,300;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+	background-color: rgb(11, 11, 11);
+	color: white;
+	margin: 0;
+	font-family: 'Noto Sans', sans-serif;
+	overflow-x: hidden;
+}
+
+*{
+	box-sizing: border-box;
+
+}
+
+
+footer{
+	border-top: 4px solid transparent;
+	border-image: url(./big-bot.gif) 30 repeat;
+	/* background-color: rgb(1, 0, 46); */
+	background-color: black;
+	color:white;
+	padding: 14px 28px;
+}
+
+a{
+	position: relative;
+	text-decoration: none;
+	padding: 4px 0px;
+	cursor: pointer;
+	/* font-weight: bold; */
+	color:white;
+	/* color: rgb(247 205 31); */
+}
+
+a::before{
+	content: '';
+	height: 2px;
+	border-radius: 4px;
+	width: 0%;
+	opacity: 0;
+	position: absolute;
+	bottom: 0;
+	transition: 0.2s all;
+	left: 50%;
+	background-color:rgb(247 205 31) ;
+}
+
+a:hover::before{
+	width: 100%;
+	opacity: 1;
+	left: 0;
+}
+
+
+#navigation{
+	padding:8px 48px;
+	display: flex;
+	width: 100vw;
+	flex-direction: row;
+	/* background-color: rgb(1, 0, 46); */
+	background-color:black;
+	border-bottom: 4px solid transparent;
+	border-image: url(./big-bot.gif) 30 repeat;
+}
+
+#navigation > ul{ 
+	display:flex;
+	padding: 0;
+	list-style: none;
+}
+
+#navigation > ul > li{
+	padding:0px 8px;
+	margin: 0px 4px;
+	text-transform: uppercase;
+	/* font-weight: bold; */
+	font-size: 24px;
+	font-family: 'Bebas Neue', cursive;
+}
+
+#navigation > ul > li > a:hover{
+	color: rgb(247 205 31);
+}
+
+#navigation > ul:nth-child(2){
+	margin-left: auto;
+}
+
+header{
+	width: 100vw;
+	height: 181px;
+	/* background-color: rgb(1, 0, 46); */
+	background-color:black;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+}
+header > img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.wrapper-content{ 
+	display: flex;
+	min-height: 70vh;
+}
+
+#content{ 
+	padding: 24px;
+}
+
+#panel2{
+	display: none;
+}
+#panel2 > .top{
+	font-weight: bold;
+	padding:0px 18px;
+}
+
+#panel2 > ul{ 
+	list-style: none;
+}
+#panel2 > ul > li{
+	padding: 4px 14px;
+}
+.wrapper-content{
+	color:black;
+	background-image: url(./bg_comics_pc.jpg);
+	background-size: repeat;
+	padding:24px;
+}
+
+.wrapper-content > #content{
+	background-color:white;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0,0.2);
+	border: 2px solid rgb(247 205 31);
+	border-radius: 4px;
+}
+
+.wrapper-account{ 
+	display: flex;
+	min-height: 100%;
+}
+.wrapper-login{
+	width: 40vw;
+	min-height: 40vh;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+}
+
+#newaccount,
+#login_form{
+	width: 15vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.wrapper-form{
+	display: flex;
+	flex-direction: column;
+	margin: 8px 0px;
+}
+
+.wrapper-form > label{
+	font-size: 12px;
+	font-weight: thin;
+
+}
+
+.textfield{
+	background-color: rgb(202, 202, 202);
+	border:1px solid lightgray;
+	padding: 8px;
+	border-radius: 4px;
+	color:black;
+}
+
+
+*[class^="btn"]{
+	padding: 8px 16px;
+	border-radius: 4px;
+	border:none;
+	color:white;
+	cursor: pointer;
+	transition: 0.2s all;
+}
+
+#remember{ 
+	font-size: 12px;
+}
+.btn-primary{
+	background-color: rgb(33, 116, 224);
+}
+
+*[class^="btn"]:hover{
+	filter: brightness(1.1);
+}
+
+*[class^="btn"]:focus{
+	transform: scale(0.9);
+}
+
+.wrapper-actions{ 
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper-remember{ 
+	font-size: 12px;
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	margin: 8px 0px;
+}
+
+.divider{
+	margin: 24px 0px;
+	height: 2px;
+	border-radius: 4px;
+	width: 100%;
+	background-color: rgba(255,255,255, 0.5);
+}
+
+.wrapper-actions a{
+	color: rgb(33, 116, 224);
+}
+
+#container{ 
+	padding: 0px;
+	background-color: rgb(28, 28, 28, 0.2);
+	width: 100vw;
+}
+
+footer{
+	font-family: 'Bebas Neue', cursive;
+
+}
+.row{
+	display: flex;
+	align-items: center;
+}
+
+.img-ball{ 
+	width: 30px;
+	height: 29px;
+	margin-right: 8px;
+	object-fit: contain;
+}
