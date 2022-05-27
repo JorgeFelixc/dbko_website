@@ -53,7 +53,7 @@ public function addInput($name, $type = 'text', $value = '', $length = 100, $rea
 	else $readonly = '';
 	$this->elements[]= '
 	<div class="wrapper-form">
-		<label for="'.$this->name.'__'.$name.'">- '.ucfirst($name).'</label>
+		<label for="'.$this->name.'__'.$name.'">'.ucfirst($name).'</label>
 		<input id="'.$this->name.'__'.$name.'" name="'.$this->name.'__'.$name.'" type="'.$type.'" maxlength="'.$length.'" value="'.$value.'"'.$readonly.'/>
 	</div>
 	';
@@ -61,13 +61,17 @@ public function addInput($name, $type = 'text', $value = '', $length = 100, $rea
 public function addCheckBox($name, $check = false){
 	if ($check) $check = ' checked="checked"';
 	else $check = '';
-	$this->elements[]= '<input type="checkbox" id="'.$this->name.'__'.$name.'" name="'.$this->name.'__'.$name.'"'.$check.'>&nbsp;<label for="'.$this->name.'__'.$name.'">'.ucfirst($name).'</label>';
+	$this->elements[]= '<input class="textfield" type="checkbox" id="'.$this->name.'__'.$name.'" name="'.$this->name.'__'.$name.'"'.$check.'>&nbsp;<label for="'.$this->name.'__'.$name.'">'.ucfirst($name).'</label>';
 }
 public function addTextbox($name,$value = '',$cols = 40,$rows = 10){
 	$this->elements[]= '<textarea name="'.$this->name.'__'.$name.'" cols="'.$cols.'" rows="'.$rows.'">'.$value.'</textarea>';
 }
 public function addSubmit($text){
-	$this->buttons[]= '<input style="width: 100px; height: 25px;" type="submit" name="'.$this->name.'__'.$this->name.'" value="'.$text.'"/>';
+	$this->buttons[]= '
+		<div class="wrapper-action">
+			<input class="btn-primary" type="submit" name="'.$this->name.'__'.$this->name.'" value="'.$text.'"/>
+		</div>		
+		';
 }
 public function addReload($text){
 	$this->buttons[]= '<input style="width: 100px; height: 25px;" onclick="ajax(\'form\',\''.htmlspecialchars($_SERVER['PHP_SELF']).'\',\'\',true)" type="button" name="'.$this->name.'__'.$this->name.'" value="'.$text.'"/>';
