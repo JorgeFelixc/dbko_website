@@ -104,25 +104,26 @@ include ("header.inc.php");
 			</form>
 		</div>
 		<div id="wrapper-register" class="wrapper-login">
-			<h1>Want a new account?</h1>
-			<button class="btn-primary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)">Create a new account</button>
-			<!-- <h1>Create Account</h1> -->
-			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account.php',getParams(document.getElementById('newaccount')),true)" method="post">
-			<!-- <div class="wrapper-form">
+			<!-- <h1>Want a new account?</h1>
+			<button class="btn-primary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php', '' ,true)">Create a new account</button> -->
+			
+			<h1>Create Account</h1>
+			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account_create.php',getParamsByName('createacc'),true)" method="post">
+			<div class="wrapper-form">
 				<label>Email</label>			
-				<input class="textfield" id="newaccount__email" name="newaccount__email" type="text" maxlength="100" value="">
+				<input class="textfield" id="newaccount__email" name="createacc" type="text" maxlength="100" value="">
 			</div>	
 			<div class="wrapper-form">
 				<label>Password</label>
-				<input class="textfield" id="newaccount__password" name="newaccount__password" type="password" maxlength="100" value="">
+				<input class="textfield" id="newaccount__password" name="createacc" type="password" maxlength="100" value="">
 			</div>	
 			<div class="wrapper-form">
 				<label>Confirm your Password</label>
-				<input class="textfield" id="newaccount__confirm" name="newaccount__confirm" type="password" maxlength="100" value="">
+				<input class="textfield" id="newaccount__confirm" name="createacc" type="password" maxlength="100" value="">
 			</div>
 			<div class="wrapper-actions">
 				<input class="btn-primary"  type="submit" name="register_submit" value="Next >>"> 
-			</div> -->
+			</div>
 			</form>
 
 			<!-- FETCJH?? -->

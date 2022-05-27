@@ -155,41 +155,58 @@ function stopDrag() {
 document.onmousedown = startDrag;
 
 //retrieves input data from element childs
-function getParams(obj) {
+function getParams(obj, nameElement = "name") {
   var getstr = "";
+  if (!obj) return getstr;
+
   for (i = 0; i < obj.childNodes.length; i++) {
     if (obj.childNodes[i].tagName == "INPUT") {
       if (
         obj.childNodes[i].type == "text" ||
         obj.childNodes[i].type == "password"
       ) {
-        getstr += obj.childNodes[i].name + "=" + obj.childNodes[i].value + "&";
+        getstr +=
+          obj.childNodes[i][nameElement] + "=" + obj.childNodes[i].value + "&";
       }
       if (obj.childNodes[i].type == "checkbox") {
         if (obj.childNodes[i].checked) {
           getstr +=
-            obj.childNodes[i].name + "=" + obj.childNodes[i].value + "&";
+            obj.childNodes[i][nameElement] +
+            "=" +
+            obj.childNodes[i].value +
+            "&";
         } else {
-          getstr += obj.childNodes[i].name + "=&";
+          getstr += obj.childNodes[i][nameElement] + "=&";
         }
       }
       if (obj.childNodes[i].type == "radio") {
         if (obj.childNodes[i].checked) {
           getstr +=
-            obj.childNodes[i].name + "=" + obj.childNodes[i].value + "&";
+            obj.childNodes[i][nameElement] +
+            "=" +
+            obj.childNodes[i].value +
+            "&";
         }
       }
     }
     if (obj.childNodes[i].tagName == "SELECT") {
       var sel = obj.childNodes[i];
-      getstr += sel.name + "=" + sel.options[sel.selectedIndex].value + "&";
+      getstr +=
+        sel[nameElement] + "=" + sel.options[sel.selectedIndex].value + "&";
     }
     if (obj.childNodes[i].tagName == "TEXTAREA") {
       var sel = obj.childNodes[i];
-      getstr += sel.name + "=" + sel.value + "&";
+      getstr += sel[nameElement] + "=" + sel.value + "&";
     }
   }
   return getstr;
+}
+
+function getParamsByName(formName) {
+  const elements = {
+    childNodes: document.getElementsByName(formName),
+  };
+  return getParams(elements, "id");
 }
 
 function calcFlags() {
