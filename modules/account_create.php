@@ -21,7 +21,7 @@ include ("../include.inc.php");
 //retrieve post data
 $form = new Form('newaccount');
 // $form = new IOBox('newaccount');
-// $form->target = $_SERVER['PHP_SELF'];
+$form->target = $_SERVER['PHP_SELF'];
 $form->addLabel('Create Account');
 $form->addInput('email');
 $form->addInput('password','password');
