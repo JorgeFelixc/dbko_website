@@ -8,8 +8,10 @@ if (isset($_POST['register_submit'])){
 }
 
 echo "em tring";
-
-echo $_POST["newaccount__email"];
-echo $_POST["newaccount__password"];
+foreach ($_POST as $param_name => $param_val) {
+  echo "Param: $param_name; Value: $param_val<br />\n";
+}
+// echo $_POST["newaccount__email"];
+// echo $_POST["newaccount__password"];
 
 ?>
