@@ -124,7 +124,7 @@ public function getBool($attr){
 	return $this->attrs[$attr] === 'on';
 }
 public function exists(){
-	echo $this->$attrs;
+	echo $this->attrs;
 	if (isset($this->attrs)) return true;
 	else return false;
 }
