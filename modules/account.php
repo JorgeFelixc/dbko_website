@@ -7,4 +7,9 @@ if (isset($_POST['register_submit'])){
   // echo $_POST;
 }
 
+echo "em tring";
+
+echo $_POST["newaccount__email"];
+echo $_POST["newaccount__password"];
+
 ?>
