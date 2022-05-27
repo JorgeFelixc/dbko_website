@@ -24,8 +24,8 @@ $form = new Form('newaccount');
 
 //check if any data was submited
 if ($form->exists()){
-	//image verification
 
+	//image verification
 	if ($form->validated()){
 		//email formating rules
 		if (AAC::ValidEmail($form->attrs['email'])){

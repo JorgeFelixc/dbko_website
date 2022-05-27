@@ -114,7 +114,8 @@ class Form
 public $attrs;
 public function __construct($name){
 		foreach( array_keys($_POST) as $key){
-            if (preg_match('/^'.$name.'__/',$key)) {
+			echo $key;
+			if (preg_match('/^'.$name.'__/',$key)) {
 				$p = explode('__', $key);
 				$this->attrs[$p[1]] = trim($_POST[$key]);
 			}
@@ -125,6 +126,7 @@ public function getBool($attr){
 }
 public function exists(){
 	echo $this->attrs;
+	echo "reading this:";
 	if (isset($this->attrs)) return true;
 	else return false;
 }
