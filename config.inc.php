@@ -18,7 +18,7 @@ $cfg['house_file'] = 'data/world/map-house.xml';
 # MySQL server settings
 $cfg['SQL_Server'] = 'localhost';
 $cfg['SQL_User'] = 'root';
-$cfg['SQL_Password'] = '';
+$cfg['SQL_Password'] = 'Dbk0server123.';
 $cfg['SQL_Database'] = 'dbko_xuni';
 
 # Must correspond to your OTServ configuration
