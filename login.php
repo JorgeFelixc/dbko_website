@@ -73,7 +73,7 @@ include ("header.inc.php");
 
 		<div class="wrapper-login">
 		<h1>Account Login</h1>
-		<form id="login_form" action="login.php?redirect=<?php echo htmlspecialchars($_GET['redirect'])?>" method="post">
+		<form id="newaccount" action="login.php?redirect=<?php echo htmlspecialchars($_GET['redirect'])?>" method="post">
 				<div class="wrapper-form">
 					<label>Account Id</label>
 					<input id="account" name="account" type="password" class="textfield" maxlength="8" size="10" tabindex="101" value="<?php echo htmlspecialchars($account);?>"/>
