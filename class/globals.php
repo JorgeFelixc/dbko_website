@@ -42,7 +42,7 @@ class AAC
 	
 	public function ValidEmail($email)
 	{
-		return eregi('^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$',$email);
+		return preg_match("/^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$/",$email);
 	}
 	
 	public function ValidGuildName($name)
