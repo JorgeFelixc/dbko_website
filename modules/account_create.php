@@ -23,6 +23,7 @@ include ("../include.inc.php");
 $form = new Form('newaccount');
 // $form = new IOBox('newaccount');
 $form->target = $_SERVER['PHP_SELF'];
+$form->addCaptcha();
 // $form->addLabel('Create Account');
 // $form->addInput('email');
 // $form->addInput('password','password');
@@ -30,9 +31,6 @@ $form->target = $_SERVER['PHP_SELF'];
 // $form->addCaptcha();
 // $form->addClose('Cancel');
 // $form->addSubmit('Next >>');
-echo "Im entrying ajsdlkjasd";
-echo "Im entrying ajsdlkjasd";
-echo "Im entrying ajsdlkjasd";
 //check if any data was submited
 if ($form->exists()){
 	//image verification
