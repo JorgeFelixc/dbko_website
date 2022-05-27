@@ -105,8 +105,8 @@ include ("header.inc.php");
 		</div>
 		<div id="wrapper-register" class="wrapper-login">
 			<h1>Create Account</h1>
-			<!-- <form id="newaccount" action="javascript:ajax('form','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)" method="post"> -->
-			<form id="newaccount" action="/modules/account_create.php" method="post">
+			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)" method="post">
+			<!-- <form id="newaccount" action=acc"" method="post"> -->
 			<div class="wrapper-form">
 				<label>Email</label>			
 				<input class="textfield" id="newaccount__email" name="newaccount__email" type="text" maxlength="100" value="">
