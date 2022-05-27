@@ -117,7 +117,7 @@ class Form
 public $attrs;
 public function __construct($name){
 		foreach( array_keys($_POST) as $key){
-			echo $'/^'.$name.'__/',$key;
+			// echo /^'.$name.'__/',$key;
 			if (preg_match('/^'.$name.'__/',$key)) {
 				$p = explode('__', $key);
 				$this->attrs[$p[1]] = trim($_POST[$key]);
