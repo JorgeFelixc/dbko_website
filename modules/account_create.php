@@ -26,8 +26,6 @@ $form = new Form('newaccount');
 if ($form->exists()){
 	//image verification
 
-	echo "Captcvha?";
-
 	if ($form->validated()){
 		//email formating rules
 		if (AAC::ValidEmail($form->attrs['email'])){

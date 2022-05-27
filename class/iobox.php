@@ -91,7 +91,7 @@ public function addLabel($code){
 public function getCode(){
 	$code = '';
 	if (isset($_POST['ajax']))
-		$code = '<form id="'.$this->name.'" action="javascript:ajax(\'wrapper-register\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post">';
+		$code = '<form id="'.$this->name.'" action="javascript:ajax(\'wrapper-register\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post" onmouseup="Cookies.create(\'iobox_x\',document.getElementById(\''.$this->name.'\').style.left,1);Cookies.create(\'iobox_y\',document.getElementById(\''.$this->name.'\').style.top,1);">';
 	else
 		$code = '<div id="iobox" class="iobox"><fieldset>'.$this->label.'<form id="'.$this->name.'" action="'.htmlspecialchars($this->target).'" method="post">';
 	
