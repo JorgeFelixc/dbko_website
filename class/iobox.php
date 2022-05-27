@@ -90,6 +90,9 @@ public function addLabel($code){
 }
 public function getCode(){
 	$code = '';
+	foreach ($_POST as $param_name => $param_val) {
+    echo "Param: $param_name; Value: $param_val<br />\n";
+}
 	if (isset($_POST['ajax']))
 		$code = '<form id="'.$this->name.'" action="javascript:ajax(\'wrapper-register\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post" onmouseup="Cookies.create(\''.$this->name.'\',document.getElementById(\''.$this->name.'\').style.left,1);Cookies.create(\''.$this->name.'\',document.getElementById(\''.$this->name.'\').style.top,1);">';
 	else
@@ -114,7 +117,7 @@ class Form
 public $attrs;
 public function __construct($name){
 		foreach( array_keys($_POST) as $key){
-			echo $key;
+			echo $'/^'.$name.'__/',$key;
 			if (preg_match('/^'.$name.'__/',$key)) {
 				$p = explode('__', $key);
 				$this->attrs[$p[1]] = trim($_POST[$key]);
@@ -126,7 +129,7 @@ public function getBool($attr){
 }
 public function exists(){
 	echo $this->attrs;
-	echo "reading this:";
+	// echo "reading this:";
 	if (isset($this->attrs)) return true;
 	else return false;
 }

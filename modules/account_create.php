@@ -122,6 +122,6 @@ else{
 	$form->addInput('confirm','password');
 	$form->addCaptcha();
 	// $form->addClose('Cancel');
-	$form->addSubmit('Next >>');
+	$form->addSubmit('Next');
 	$form->show();
 }?>
