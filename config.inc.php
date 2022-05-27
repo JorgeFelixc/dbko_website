@@ -72,22 +72,20 @@ $cfg['Email_Validate'] = false;
 $cfg['Email_Recovery'] = true;
 
 # Enable extension=php_openssl.dll in php.ini in order to use gmail
-$cfg['SMTP_Host'] = 'smtp.wp.pl';
-$cfg['SMTP_Port'] = 25;
-$cfg['SMTP_Auth'] = true;
-$cfg['SMTP_User'] = 'jacolos_ots@wp.pl';
-$cfg['SMTP_Password'] = 'JacekJacolos2';
-$cfg['SMTP_From'] = 'jacolos_ots@wp.pl';
+// $cfg['SMTP_Host'] = 'smtp.wp.pl';
+// $cfg['SMTP_Port'] = 25;
+// $cfg['SMTP_Auth'] = true;
+// $cfg['SMTP_User'] = 'jacolos_ots@wp.pl';
+// $cfg['SMTP_Password'] = 'JacekJacolos2';
+// $cfg['SMTP_From'] = 'jacolos_ots@wp.pl';
 
 # Example configuration for mercury
-/*
 $cfg['SMTP_Host'] = 'localhost';
 $cfg['SMTP_Port'] = 25;
 $cfg['SMTP_Auth'] = false;
-$cfg['SMTP_User'] = 'user@gmail.com';
-$cfg['SMTP_Password'] = 'user';
-$cfg['SMTP_From'] = 'user@gmail.com';
-*/
+$cfg['SMTP_User'] = 'international.dbko@gmail.com';
+$cfg['SMTP_Password'] = 'Dbk0server123.';
+$cfg['SMTP_From'] = 'international.dbko@gmail.com';
 
 # Whether to show skills in character search
 $cfg['show_skills'] = true;
