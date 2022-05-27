@@ -139,7 +139,7 @@ include ("header.inc.php");
 				<input class="textfield" id="newaccount__confirm" name="create_acc" type="password" maxlength="100" value="">
 			</div>
 			<div class="wrapper-actions">
-				<button class="btn-primary" onclick="javascript:postForm('/modules/account.php', 'create_acc')" > Create Account </button> 
+				<input class="btn-primary" type="button"  name="register_submit" onclick="javascript:postForm('/modules/account.php', 'create_acc')"  value="Next >>"> 
 			</div>
 			</form>
 		</div>
