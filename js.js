@@ -212,25 +212,26 @@ setTimeout("server_state()", 60000);
 async function postForm(uri, formName) {
   const inputValues = {};
 
-  const inputs = document.getElementsByName(formName);
-  if (!inputs) return;
+  const inputs = document.getElementById(formName);
+  // if (!inputs) return;
 
-  inputs.forEach((htmlInput) => {
-    if (htmlInput.value) {
-      inputValues[htmlInput.id] = htmlInput.value;
-    }
-  });
+  // inputs.forEach((htmlInput) => {
+  //   if (htmlInput.value) {
+  //     inputValues[htmlInput.id] = htmlInput.value;
+  //   }
+  // });
 
   try {
     const postService = await fetch(uri, {
       method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: inputValues,
+      // headers: {
+      //   "Content-type": "application/json",
+      // },
+      body: inputs,
     });
 
-    console.log(postService);
+    const jsonData = await postService.json();
+    console.log(jsonData);
   } catch (ex) {
     console.log("EX:", ex);
   }

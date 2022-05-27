@@ -73,7 +73,7 @@ include ("header.inc.php");
 
 		<div class="wrapper-login">
 		<h1>Account Login</h1>
-		<form id="newaccount" action="login.php?redirect=<?php echo htmlspecialchars($_GET['redirect'])?>" method="post">
+		<form id="login" action="login.php?redirect=<?php echo htmlspecialchars($_GET['redirect'])?>" method="post">
 				<div class="wrapper-form">
 					<label>Account Id</label>
 					<input id="account" name="account" type="password" class="textfield" maxlength="8" size="10" tabindex="101" value="<?php echo htmlspecialchars($account);?>"/>
@@ -104,8 +104,8 @@ include ("header.inc.php");
 			</form>
 		</div>
 		<div id="wrapper-register" class="wrapper-login">
-			<!-- <h1>Want a new account?</h1>
-			<button class="btn-primary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)">Create a new account</button> -->
+			<h1>Want a new account?</h1>
+			<button class="btn-primary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php',getParams(document.getElementById('newaccount')),true)">Create a new account</button>
 			<!-- <h1>Create Account</h1>
 			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account.php',getParams(document.getElementById('newaccount')),true)" method="post">
 			<div class="wrapper-form">
@@ -124,8 +124,10 @@ include ("header.inc.php");
 				<input class="btn-primary"  type="submit" name="register_submit" value="Next >>"> 
 			</div>
 			</form> -->
-			<h1>Create Account</h1>
-			<form id="newaccount">
+
+			<!-- FETCJH?? -->
+			<!-- <h1>Create Account</h1>
+			<form id="createacc">
 			<div class="wrapper-form">
 				<label>Email</label>			
 				<input class="textfield" id="newaccount__email" name="create_acc" type="text" maxlength="100" value="">
@@ -139,9 +141,9 @@ include ("header.inc.php");
 				<input class="textfield" id="newaccount__confirm" name="create_acc" type="password" maxlength="100" value="">
 			</div>
 			<div class="wrapper-actions">
-				<input class="btn-primary" type="button"  name="register_submit" onclick="javascript:postForm('/modules/account.php', 'create_acc')"  value="Next >>"> 
+				<input class="btn-primary" type="button"  name="register_submit" onclick="javascript:postForm('/modules/account.php?', 'create_acc')"  value="Next >>"> 
 			</div>
-			</form>
+			</form> -->
 		</div>
 			<!-- <fieldset>
 				<legend>More Options</legend>
