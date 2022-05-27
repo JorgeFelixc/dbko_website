@@ -89,6 +89,7 @@ public function addLabel($code){
 	$this->label = '<h1>'.$code.'</h1>';
 }
 public function getCode(){
+	$code = '';
 	// if (isset($_POST['ajax']))
 	// 	$code = '<table cellspacing="10px" onmouseup="Cookies.create(\'iobox_x\',document.getElementById(\'iobox\').style.left,1);Cookies.create(\'iobox_y\',document.getElementById(\'iobox\').style.top,1);" style="visibility:hidden" id="iobox" class="draggable"><tr><td><fieldset>'.$this->label.'<form id="'.$this->name.'" action="javascript:ajax(\'form\',\''.htmlspecialchars($this->target).'\',getParams(document.getElementById(\''.$this->name.'\')),true)" method="post">';
 	// else
