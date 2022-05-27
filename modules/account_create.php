@@ -22,6 +22,7 @@ include ("../include.inc.php");
 //retrieve post data
 $form = new Form('newaccount');
 
+echo $form;
 //check if any data was submited
 if ($form->exists()){
 	//image verification
