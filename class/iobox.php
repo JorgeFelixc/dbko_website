@@ -86,7 +86,7 @@ public function addCode($code){
 	$this->elements[]= $code;
 }
 public function addLabel($code){
-	$this->elements = '<h1>'.$code.'</h1>';
+	$this->elements[] = '<h1>'.$code.'</h1>';
 }
 public function getCode(){
 	$code = '';
