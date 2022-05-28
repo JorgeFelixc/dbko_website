@@ -57,34 +57,40 @@ function ajax(element_id, script_url, get, warn) {
     window.location.href = script_url + "?" + encodeURI(get);
   }
   if (warn) {
-    document.getElementById(element_id).innerHTML =
-      '<div style="z-index: 10; position: absolute; background-color: #660000; color:white;">Loading... Please wait or click <a style="color: white;" href="' +
-      script_url +
-      "?" +
-      encodeURI(get) +
-      '">here</a></div>' +
-      document.getElementById(element_id).innerHTML;
+    // document.getElementById(element_id).innerHTML =
+    //   '<div style="z-index: 10; position: absolute; background-color: #660000; color:white;">Loading... Please wait or click <a style="color: white;" href="' +
+    //   script_url +
+    //   "?" +
+    //   encodeURI(get) +
+    //   '">here</a></div>' +
+    //   document.getElementById(element_id).innerHTML;
   }
 
   http_request.onreadystatechange = function () {
-    if (http_request.readyState == 4) {
-      if (http_request.status == 200) {
-        document.getElementById(element_id).innerHTML =
-          http_request.responseText;
-        if (element_id == "form") {
-          ticker = 0;
-          document.getElementById("iobox").style.left = Cookies.get("iobox_x");
-          document.getElementById("iobox").style.top = Cookies.get("iobox_y");
-          document.getElementById("iobox").style["visibility"] = "visible";
-        }
-      } else if (warn) {
-        alert(
-          "Server failed to load script: \n" +
-            script_url +
-            "\nError: " +
-            http_request.status
-        );
+    if (http_request.readyState != 4) {
+      return;
+    }
+    if (http_request.status == 200) {
+      if (isNotification(http_request.responseText)) {
+        console.log("IS NOTIFICATION");
+        makeNotification(http_request.responseText);
+        return;
       }
+
+      document.getElementById(element_id).innerHTML = http_request.responseText;
+      if (element_id == "form") {
+        ticker = 0;
+        document.getElementById("iobox").style.left = Cookies.get("iobox_x");
+        document.getElementById("iobox").style.top = Cookies.get("iobox_y");
+        document.getElementById("iobox").style["visibility"] = "visible";
+      }
+    } else if (warn) {
+      alert(
+        "Server failed to load script: \n" +
+          script_url +
+          "\nError: " +
+          http_request.status
+      );
     }
   };
   parameters = encodeURI(get) + "&ajax=true";
@@ -226,6 +232,16 @@ function server_state() {
 }
 setTimeout("server_state()", 60000);
 
+/**
+ * Method to check if the html comming has id notification..
+ * @param {string} htmlString
+ * @returns
+ */
+function isNotification(htmlString) {
+  const doc = htmlString.indexOf('id="notification"', 0);
+  return doc >= 0 ? true : false;
+}
+
 async function postForm(uri, formName) {
   const inputValues = {};
 
@@ -253,3 +269,49 @@ async function postForm(uri, formName) {
     console.log("EX:", ex);
   }
 }
+
+/**
+ * Clear styles to make transition
+ * @param {HTMLDivElement} element
+ */
+const clearStyles = (element) => {
+  element.style.opacity = 0;
+  element.style.transform = "translateX(-20px)";
+};
+
+/**
+ * Do transition
+ * @param {HTMLDivElement} element
+ */
+const showTransition = (element) => {
+  element.style.opacity = 1;
+  element.style.transform = "translateX(0px)";
+};
+
+const makeNotification = (body) => {
+  const fatherName = "master-notification";
+  const fatherBox = document.getElementById(fatherName);
+
+  var notificationElement = document.createElement("div");
+  clearStyles(notificationElement);
+  notificationElement.innerHTML = body;
+  showTransition(notificationElement);
+
+  const attributeScope = `${fatherName}${fatherBox.children.length}`;
+  notificationElement.setAttribute("name", attributeScope);
+
+  fatherBox.appendChild(notificationElement);
+
+  let timer = 0;
+  const notificationTimer = 5;
+  const timerToClose = setInterval(() => {
+    if (timer === notificationTimer - 1) {
+      clearStyles(notificationElement);
+    }
+    if (timer >= notificationTimer) {
+      notificationElement.remove();
+      clearInterval(timerToClose);
+    }
+    timer++;
+  }, 1000);
+};

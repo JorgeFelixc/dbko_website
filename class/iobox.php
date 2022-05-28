@@ -105,10 +105,15 @@ public function getCode(){
 	return $code;
 }
 
-public function getCodeNotification(){
-	foreach ($this->elements as $element)
-		$code.= $element;
+public function getCodeNotification($title, $description, $extraBody){
+	$code = '<div id="notification" >';
+	$code .= '<h3>'.$title.'</h3>';
+	$code .= '<p>'.$description.'</p>';
+	if($extraBody){
+		$code .= $extraBody;
+	}
 
+	$code .= '</div>';
 	return $code;
 }
 
@@ -116,8 +121,8 @@ public function show(){
 	echo $this->getCode();
 }
 
-public function showNotification(){
-	echo $this->getCodeNotification();
+public function showNotification($title, $description, $extraBody){
+	echo $this->getCodeNotification($title, $description, $extraBody);
 }
 }
 

@@ -31,6 +31,8 @@
 <?php }?>
 </head>
 <body>
+	<!-- Notification Father -->
+	<div class="box-notification" id="master-notification"></div>
 <div id="form"></div>
 <div id="container">
 <!-- <div id="header"><div id="server_name"><?php echo $cfg['server_name']?></div></div> -->

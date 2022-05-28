@@ -49,7 +49,8 @@ public function setup(){
 
 //Perform simple SQL query
 public function myQuery($q){
-	$this->last_query = @mysql_query($q);
+	$this->last_query = $this->connection->query($q);
+	// $this->last_query = @mysql_query($q);
 	if ($this->last_query === false){
 		$this->last_error = 'Error #'.mysql_errno()."\n".$q."\n" . mysql_error() . "\n";
 		$analysis = $this->analyze();

@@ -252,3 +252,29 @@ footer{
 	margin-right: 8px;
 	object-fit: contain;
 }
+
+.box-notification{
+	position:absolute;
+	left: 0;
+	bottom: 0;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	margin: 12px;
+}
+
+.box-notification > div {
+	min-height: 60px;
+	z-index: 200;
+	transition: 0.2s all;
+	width: 330px;
+	border-radius: 4px;
+	margin: 12px 0px;
+	background-color: rgb(33, 116, 224);
+	padding: 16px;
+}
+
+.box-notification  h3,
+.box-notification  p{
+	margin: 0;
+}

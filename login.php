@@ -111,15 +111,15 @@ include ("header.inc.php");
 			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account_create.php',getParamsByName('createacc'),true)" method="post">
 			<div class="wrapper-form">
 				<label>Email</label>			
-				<input class="textfield" id="newaccount__email" name="newaccount__email" type="text" maxlength="100" value="">
+				<input class="textfield" id="newaccount__email" name="createacc" type="text" maxlength="100" value="">
 			</div>	
 			<div class="wrapper-form">
 				<label>Password</label>
-				<input class="textfield" id="newaccount__password" name="newaccount__password" type="password" maxlength="100" value="">
+				<input class="textfield" id="newaccount__password" name="createacc" type="password" maxlength="100" value="">
 			</div>	
 			<div class="wrapper-form">
 				<label>Confirm your Password</label>
-				<input class="textfield" id="newaccount__confirm" name="newaccount__confirm" type="password" maxlength="100" value="">
+				<input class="textfield" id="newaccount__confirm" name="createacc" type="password" maxlength="100" value="">
 			</div>
 			<div class="wrapper-actions">
 				<input class="btn-primary"  type="submit" name="register_submit" value="Next >>"> 

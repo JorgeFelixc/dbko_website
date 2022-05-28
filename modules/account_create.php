@@ -26,11 +26,9 @@ $form->target = $_SERVER['PHP_SELF'];
 
 //check if any data was submited
 if ($form->exists()){
-	echo "this exists";
 	//image verification
 	if ($form->validated()){
 
-		echo "not validate";
 		//email formating rules
 		$globals = new AAC();
 		if ($globals->ValidEmail($form->attrs['email'])){
@@ -95,7 +93,8 @@ if ($form->exists()){
 				$msg->addInput('password','text',$password,50,true);
 				$msg->addMsg('You can now login into your account and start creating characters.');
 				$msg->addClose('Finish');
-				$msg->showNotification();
+				// $msg->showNotification("Created Correctly", "Your acc is created correctly", false);
+				$msg->show();
 				$account->logAction('Created');
 			}
 
@@ -113,10 +112,10 @@ if ($form->exists()){
 		//create new message
 		$msg = new IOBox('message');
 		$msg->target = $_SERVER['PHP_SELF'];
-		$msg->addMsg($error);
-		$msg->addReload('<< Back');
-		$msg->addClose('OK');
-		$msg->showNotification();
+		// $msg->addMsg($error);
+		// $msg->addReload('<< Back');
+		// $msg->addClose('OK');
+		$msg->showNotification("Error", $error, false);
 	}
 }
 else{
@@ -130,5 +129,5 @@ else{
 	$form->addCaptcha();
 	// $form->addClose('Cancel');
 	$form->addSubmit('Next');
-	// $form->show();
+	$form->show();
 }?>
