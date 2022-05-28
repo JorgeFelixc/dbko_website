@@ -109,6 +109,10 @@ include ("header.inc.php");
 			
 			<h1>Create Account</h1>
 			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account_create.php',getParamsByName('createacc'),true)" method="post">
+				<div class="wrapper-form">
+					<label>Name</label>			
+					<input class="textfield" id="newaccount__name" name="createacc" type="text" maxlength="100" value="">
+				</div>	
 			<div class="wrapper-form">
 				<label>Email</label>			
 				<input class="textfield" id="newaccount__email" name="createacc" type="text" maxlength="100" value="">

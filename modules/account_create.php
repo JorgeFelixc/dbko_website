@@ -45,6 +45,10 @@ if ($form->exists()){
 				$password = substr(str_shuffle('qwertyuipasdfhjklzxcvbnm123456789'), 0, 6);
 			$account->setPassword($password);
 			$account->setAttr('email',$form->attrs['email']);
+			$account->setAttr('rlname', $form->attrs['name'] );
+			$account->setAttr('location', 'Mexico');
+			$account->setAttr('comment', 'Mexico');
+			$account->setAttr('recovery_key', 'Mexico');
 			//create the account
 			$account->save();
 
