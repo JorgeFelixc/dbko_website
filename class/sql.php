@@ -174,9 +174,9 @@ public function myReplace($table,$data)
 	{global $cfg;
 		$fields = array_keys($data);
 		$values = array_values($data);
-		$query = 'REPLACE INTO `'.mysql_escape_string($table).'` (';
+		$query = 'REPLACE INTO `'.$this->connection->real_escape_string($table).'` (';
 		foreach ($fields as $field)
-			$query.= '`'.mysql_escape_string($field).'`,';
+			$query.= '`'.$this->connection->real_escape_string($field).'`,';
 		$query = substr($query, 0, strlen($query)-1);
 		$query.= ') VALUES (';
 		foreach ($values as $value)
