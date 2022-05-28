@@ -70,7 +70,7 @@ public function failed(){
     public function fetch_array() {
         if (!$this->failed())
             if (isset($this->last_query))
-                return mysql_fetch_array($this->last_query);
+                return mysqli_fetch_array($this->last_query);
             else
             throw new ClassException('Attempt to fetch failed query.');
 }
@@ -114,7 +114,7 @@ public function analyze()
 	{
 		$result = $this->connection->query('SHOW TABLES');
 		if ($result === false) return false;
-		while ($a = mysql_fetch_array($result))
+		while ($a = mysqli_fetch_array($result))
 			$t[] = $a[0];
 		$is_aac_db = in_array('nicaw_accounts',$t);
 		$is_server_db = in_array('accounts',$t) && in_array('players',$t);
@@ -133,7 +133,7 @@ public function analyze()
 public function repairTables()
 	{
 		$result = mysql_query('SHOW TABLES');
-		while ($a = mysql_fetch_array($result))
+		while ($a = mysqli_fetch_array($result))
 			$tables[] = $a[0];
 		if (isset($tables))
 			foreach($tables as $table)
