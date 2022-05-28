@@ -54,7 +54,7 @@ include ("header.inc.php");
 	function remember_toggle(node)
 	{
 		if (node.checked){
-			Cookies.create('remember','yes',30);
+			Cookies.create('remember','yes',8);
 		}else{
 			Cookies.erase('account');
 			Cookies.erase('password');
