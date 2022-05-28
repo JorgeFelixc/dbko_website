@@ -92,7 +92,7 @@ public function num_rows()
 //Quotes a string
 public function escape_string($string)
   {
-    return mysql_real_escape_string($string);
+    return $this->connection->real_escape_string($string);
   }
 
 //Quotes a value so it's safe to use in SQL statement
@@ -150,9 +150,9 @@ public function myInsert($table,$data)
 	{global $cfg;
 		$fields = array_keys($data);
 		$values = array_values($data);
-		$query = 'INSERT INTO `'.mysql_escape_string($table).'` (';
+		$query = 'INSERT INTO `'.$this->connection->real_escape_string($table).'` (';
 		foreach ($fields as $field)
-			$query.= '`'.mysql_escape_string($field).'`,';
+			$query.= '`'.$this->connection->real_escape_string($field).'`,';
 		$query = substr($query, 0, strlen($query)-1);
 		$query.= ') VALUES (';
 		foreach ($values as $value)
