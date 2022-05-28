@@ -83,7 +83,8 @@ public function insert_id(){
 public function num_rows()
   {
     if (!$this->failed())
-      return mysql_num_rows($this->last_query);
+			return $this->connection->affected_rows;
+      // return mysql_num_rows($this->last_query);
     else
       throw new Exception('Attempt to count failed query'."\n".$this->last_error);
   }
@@ -111,7 +112,7 @@ public function getError()
 	
 public function analyze()
 	{
-		$result = @mysql_query('SHOW TABLES');
+		$result = $this->connection->query('SHOW TABLES');
 		if ($result === false) return false;
 		while ($a = mysql_fetch_array($result))
 			$t[] = $a[0];
