@@ -198,9 +198,9 @@ public function myRetrieve($table,$data)
 	{
 		$fields = array_keys($data); 
 		$values = array_values($data);
-		$query = 'SELECT * FROM `'.mysql_escape_string($table).'` WHERE (';
+		$query = 'SELECT * FROM `'.$this->connection->real_escape_string($table).'` WHERE (';
 		for ($i = 0; $i < count($fields); $i++)
-			$query.= '`'.mysql_escape_string($fields[$i]).'` = '.$this->quote($values[$i]).' AND ';
+			$query.= '`'.$this->connection->real_escape_string($fields[$i]).'` = '.$this->quote($values[$i]).' AND ';
 		$query = substr($query, 0, strlen($query)-4);
 		$query.=');';
 		$this->myQuery($query);
@@ -215,15 +215,15 @@ public function myUpdate($table,$data,$where,$limit=1)
 	{
 		$fields = array_keys($data); 
 		$values = array_values($data);
-		$query = 'UPDATE `'.mysql_escape_string($table).'` SET ';
+		$query = 'UPDATE `'.$this->connection->real_escape_string($table).'` SET ';
 		for ($i = 0; $i < count($fields); $i++)
-			$query.= '`'.mysql_escape_string($fields[$i]).'` = '.$this->quote($values[$i]).', ';
+			$query.= '`'.$this->connection->real_escape_string($fields[$i]).'` = '.$this->quote($values[$i]).', ';
 		$query = substr($query, 0, strlen($query)-2);
 		$query.=' WHERE (';
 		$fields = array_keys($where); 
 		$values = array_values($where);
 		for ($i = 0; $i < count($fields); $i++)
-			$query.= '`'.mysql_escape_string($fields[$i]).'` = '.$this->quote($values[$i]).' AND ';
+			$query.= '`'.$this->connection->real_escape_string($fields[$i]).'` = '.$this->quote($values[$i]).' AND ';
 		$query = substr($query, 0, strlen($query)-4);
 		if (isset($limit))
 			$query.=') LIMIT '.$limit.';';
@@ -239,9 +239,9 @@ public function myDelete($table,$data,$limit = 1)
 	{
 		$fields = array_keys($data); 
 		$values = array_values($data);
-		$query = 'DELETE FROM `'.mysql_escape_string($table).'` WHERE (';
+		$query = 'DELETE FROM `'.$this->connection->real_escape_string($table).'` WHERE (';
 		for ($i = 0; $i < count($fields); $i++)
-			$query.= '`'.mysql_escape_string($fields[$i]).'` = '.$this->quote($values[$i]).' AND ';
+			$query.= '`'.$this->connection->real_escape_string($fields[$i]).'` = '.$this->quote($values[$i]).' AND ';
 		$query = substr($query, 0, strlen($query)-4);
 		if ($limit > 0)
 			$query.=') LIMIT '.$limit.';';
