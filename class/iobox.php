@@ -104,8 +104,20 @@ public function getCode(){
 	$code.= '</form>';
 	return $code;
 }
+
+public function getCodeNotification(){
+	foreach ($this->elements as $element)
+		$code.= $element;
+
+	return $code;
+}
+
 public function show(){
 	echo $this->getCode();
+}
+
+public function showNotification(){
+	echo $this->getCodeNotification();
 }
 }
 
