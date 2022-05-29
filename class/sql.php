@@ -76,7 +76,7 @@ public function failed(){
 }
 //Returns the last insert id
 public function insert_id(){
-      return mysql_insert_id();
+      return mysqli_insert_id($this->connection);
 }
   
 //Returns the number of rows affected

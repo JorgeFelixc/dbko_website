@@ -303,7 +303,7 @@ const makeNotification = (body) => {
   fatherBox.appendChild(notificationElement);
 
   let timer = 0;
-  const notificationTimer = 5;
+  const notificationTimer = 3;
   const timerToClose = setInterval(() => {
     if (timer === notificationTimer - 1) {
       clearStyles(notificationElement);

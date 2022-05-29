@@ -17,7 +17,8 @@ if ($form->exists()){
 		//check character number
 		if (count($account->players) < $cfg['maxchars']){
 			//check for valid name
-			if (AAC::ValidPlayerName($form->attrs['name'])){
+			$accValidator = new AAC();
+			if ($accValidator->ValidPlayerName($form->attrs['name'])){
 				$newplayer->setAttr('name',(string)$form->attrs['name']);
 				//player name must not exist
 				if (!$newplayer->exists()){

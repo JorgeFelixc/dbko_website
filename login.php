@@ -74,7 +74,7 @@ include ("header.inc.php");
 		<div class="wrapper-login">
 		<h1>Account Login</h1>
 		<form id="login" action="login.php?redirect=<?php echo htmlspecialchars($_GET['redirect'])?>" method="post">
-				<div class="wrapper-form">
+				<div class="wrapper-form size-md">
 					<label>Account Id</label>
 					<input id="account" name="account" type="password" class="textfield" maxlength="8" size="10" tabindex="101" value="<?php echo htmlspecialchars($account);?>"/>
 				</div>
@@ -86,10 +86,10 @@ include ("header.inc.php");
 					<div class="wrapper-remember">
 						<?php if ($cfg['secure_session']) echo ' style="visibility: hidden"';?>&nbsp;<input id="remember" name="remember" type="checkbox" tabindex="103" onclick="remember_toggle(this)"<?php if (!empty($_COOKIE['remember'])) echo ' checked="checked"';?>/>&nbsp;<label for="remember">Remember Me?</label>
 					</div>
-					<input class="btn-primary" type="submit" name="login_submit" value="Sign in" tabindex="104"/>
+					<button class="btn-secondary" type="submit" name="login_submit" tabindex="104">Sign in</button>
 					<div class="divider"></div>
 					<?php if($cfg['Email_Recovery']){?>
-						<button class="btn-primary" onclick="ajax('form','modules/account_recover.php','',true)" >Forgot your password?</button>
+						<button class="btn-secondary" onclick="ajax('form','modules/account_recover.php','',true)" >Forgot your password?</button>
 					<?php }?>
 				</div>
 				<?php
@@ -105,7 +105,7 @@ include ("header.inc.php");
 		</div>
 		<div id="wrapper-register" class="wrapper-login">
 			<!-- <h1>Want a new account?</h1>
-			<button class="btn-primary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php', '' ,true)">Create a new account</button> -->
+			<button class="btn-secondary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php', '' ,true)">Create a new account</button> -->
 			
 			<h1>Create Account</h1>
 			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account_create.php',getParamsByName('createacc'),true)" method="post">
@@ -126,7 +126,7 @@ include ("header.inc.php");
 				<input class="textfield" id="newaccount__confirm" name="createacc" type="password" maxlength="100" value="">
 			</div>
 			<div class="wrapper-actions">
-				<input class="btn-primary"  type="submit" name="register_submit" value="Next >>"> 
+				<button class="btn-secondary"  type="submit" name="register_submit">Next</button>
 			</div>
 			</form>
 
@@ -146,7 +146,7 @@ include ("header.inc.php");
 				<input class="textfield" id="newaccount__confirm" name="create_acc" type="password" maxlength="100" value="">
 			</div>
 			<div class="wrapper-actions">
-				<input class="btn-primary" type="button"  name="register_submit" onclick="javascript:postForm('/modules/account.php?', 'create_acc')"  value="Next >>"> 
+				<input class="btn-secondary" type="button"  name="register_submit" onclick="javascript:postForm('/modules/account.php?', 'create_acc')"  value="Next >>"> 
 			</div>
 			</form> -->
 		</div>

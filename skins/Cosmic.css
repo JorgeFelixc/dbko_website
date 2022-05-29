@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,400;0,800;1,300;1,400;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+:root{
+	--var-primary-bg: rgb(33, 116, 224);
+	--var-primary-color: white;
+	--var-secondary-bg: black;
+	--var-secondary-color: rgb(247 205 31);
+
+	--font-bebas:  'Bebas Neue', cursive;
+}
+
 body{
 	background-color: rgb(11, 11, 11);
 	color: white;
@@ -14,6 +23,9 @@ body{
 
 }
 
+h1,h2,h3{
+	font-family: var(--font-bebas);
+}
 
 footer{
 	border-top: 4px solid transparent;
@@ -44,7 +56,7 @@ a::before{
 	bottom: 0;
 	transition: 0.2s all;
 	left: 50%;
-	background-color:rgb(247 205 31) ;
+	background-color:var(--var-secondary-color);
 }
 
 a:hover::before{
@@ -77,7 +89,7 @@ a:hover::before{
 	text-transform: uppercase;
 	/* font-weight: bold; */
 	font-size: 24px;
-	font-family: 'Bebas Neue', cursive;
+	font-family: var(--font-bebas);
 }
 
 #navigation > ul > li > a:hover{
@@ -133,6 +145,12 @@ header > img{
 	padding:24px;
 }
 
+.wrapper-common {
+	margin:0px 18px;
+	padding: 24px;
+}
+
+.wrapper-common,
 .wrapper-content > #content{
 	background-color:white;
 	box-shadow: 1px 1px 15px rgba(0, 0, 0,0.2);
@@ -188,6 +206,7 @@ header > img{
 	border:none;
 	color:white;
 	cursor: pointer;
+	position: relative;
 	transition: 0.2s all;
 }
 
@@ -195,8 +214,56 @@ header > img{
 	font-size: 12px;
 }
 .btn-primary{
-	background-color: rgb(33, 116, 224);
+	background-color: var(--var-primary-bg);
 }
+
+.btn-secondary{
+	position: relative;
+	background-color: transparent; 
+	font-family: var(--font-bebas);
+	color:var(--var-secondary-color);
+	z-index: 5;
+}
+
+.btn-secondary::after,
+.btn-secondary::before{
+	content: '';
+	position: absolute;
+	transform: skew(25deg);
+	left:0;
+	top: 0;
+	z-index: -3;
+	width: 100%;
+	height: 100%;
+	background-color:var(--var-secondary-bg);
+}
+
+.btn-secondary::after{
+	transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+	background-color: var(--var-secondary-color);
+	width: 0px;
+	left:50%;
+	z-index: -1;
+}
+
+.btn-secondary:hover::after{
+	width: 100%;
+	left:0;
+}
+.btn-secondary:hover{
+	color:var(--var-secondary-bg)
+}
+
+.btn-secondary:focus::after{
+	left:50%;
+	width: 0;
+	border-radius: 50%;
+}
+
+.btn-secondary:focus{
+	color:var(--var-secondary-color);
+}
+
 
 *[class^="btn"]:hover{
 	filter: brightness(1.1);
@@ -224,11 +291,11 @@ header > img{
 	height: 2px;
 	border-radius: 4px;
 	width: 100%;
-	background-color: rgba(255,255,255, 0.5);
+	background-color: var(--var-secondary-color);
 }
 
 .wrapper-actions a{
-	color: rgb(33, 116, 224);
+	color: var(--var-primary-bg);
 }
 
 #container{ 
@@ -238,12 +305,21 @@ header > img{
 }
 
 footer{
-	font-family: 'Bebas Neue', cursive;
+	font-family: var(--font-bebas);
 
 }
 .row{
 	display: flex;
 	align-items: center;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+}
+
+.py-child > :nth-child(n){
+	margin:4px 0px;
 }
 
 .img-ball{ 
@@ -270,11 +346,26 @@ footer{
 	width: 330px;
 	border-radius: 4px;
 	margin: 12px 0px;
-	background-color: rgb(33, 116, 224);
+	background-color: var(--var-secondary-bg);
+	color:var(--var-secondary-color);
 	padding: 16px;
+	font-family: var(--font-bebas);
 }
 
 .box-notification  h3,
 .box-notification  p{
 	margin: 0;
+}
+
+
+.size-md{ 
+	width: 300px;
+}
+
+.top-auto{
+	margin-top: auto;
+}
+
+.left-auto{
+	margin-left:auto;
 }

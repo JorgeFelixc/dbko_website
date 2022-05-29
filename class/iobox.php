@@ -54,7 +54,7 @@ public function addInput($name, $type = 'text', $value = '', $length = 100, $rea
 	$this->elements[]= '
 	<div class="wrapper-form">
 		<label for="'.$this->name.'__'.$name.'">'.ucfirst($name).'</label>
-		<input class="textfield" id="'.$this->name.'__'.$name.'" name="'.$this->name.'__'.$name.'" type="'.$type.'" maxlength="'.$length.'" value="'.$value.'"'.$readonly.'/>
+		<input class="textfield" id="'.$this->name.'__'.$name.'" name="'.$this->name.'" type="'.$type.'" maxlength="'.$length.'" value="'.$value.'"'.$readonly.'/>
 	</div>
 	';
 }
@@ -69,7 +69,7 @@ public function addTextbox($name,$value = '',$cols = 40,$rows = 10){
 public function addSubmit($text){
 	$this->buttons[]= '
 		<div class="wrapper-actions">
-			<input class="btn-primary" type="submit" name="'.$this->name.'__'.$this->name.'" value="'.$text.'"/>
+			<button class="btn-secondary" type="submit" name="'.$this->name.'__'.$this->name.'" >'.$text.'</button>
 		</div>		
 		';
 }

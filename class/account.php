@@ -19,7 +19,7 @@
 class Account extends SQL
 {
 private $attrs;
-public $players;
+public $players = [];
 
 public function __construct()
 	{
@@ -45,13 +45,13 @@ public function load($id)
 		$this->attrs['location'] = $nicaw_acc['location'];
 		$this->attrs['comment'] = $nicaw_acc['comment'];
 		$this->attrs['recovery_key'] = $nicaw_acc['recovery_key'];
-		if ($acc['premdays'] > 0) $this->attrs['premend'] = $acc['premdays']*24*3600 + time();
+		if ($acc['premDays'] > 0) $this->attrs['premend'] = $acc['premdays']*24*3600 + time();
 		elseif ($acc['premEnd'] > 0) $this->attrs['premend'] = $acc['premEnd'];
 		//get characters of this account
-		$this->myQuery('SELECT players.id, players.name FROM players WHERE (`account_id`='.$this->quote($this->attrs['accno']).')');
+		$this->myQuery('SELECT players.id, players.name, players.vocation FROM players WHERE (`account_id`='.$this->quote($this->attrs['accno']).')');
 		if ($this->failed()) throw new Exception($this->getError());
 		while ($a = $this->fetch_array()){
-			$this->players[] = array('name' => $a['name'], 'id' => $a['id']);
+			$this->players[] = array('name' => $a['name'], 'id' => $a['id'], 'vocation' => $a['vocation']);
 		}
 		//good, now we have all attributes stored in object
 		return true;
