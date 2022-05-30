@@ -15,7 +15,7 @@ button::after {
  cursor: pointer;
  padding: 16px 60px;
  font-size: 28px;
- background: linear-gradient(45deg, transparent 5%, #FFA500 5%);
+ background: linear-gradient(45deg, transparent 5%, #000000 5%);
  border: 0;
  color: #fff;
  letter-spacing: 3px;
@@ -163,15 +163,25 @@ animation: colors 2s infinite;
 <div id="content" style="width: 100%;">
     <img class="top fade" src="./img/2bfaf53cf6ceac24efcb61844f62c267.png" style="width:300px; margin-left: auto; margin-right: auto; display: block;"></img>
 <div class="mid">
-
-    <div class="fade" style="display:flex;">
-        <button type="submit" onclick="window.open('dbko_client.zip')">
-            <div style="display:flex">
-                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bfcca197-3578-4aac-affa-0f78c0bac51c/detjt52-fd0e1703-e28e-4cc4-9125-902e94d670a5.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmY2NhMTk3LTM1NzgtNGFhYy1hZmZhLTBmNzhjMGJhYzUxY1wvZGV0anQ1Mi1mZDBlMTcwMy1lMjhlLTRjYzQtOTEyNS05MDJlOTRkNjcwYTUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lWj3fT_-PSKiKkz8Y_W9esdIDtVs_EaHGUf0mHGnWA0" style="max-width: 70px;  display: block; margin-right: 0; border-radius: 10px;;"></img>
-                <span class="slide" style="margin-top:5%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">DOWNLOAD</span>
-                <span class="colors" style="margin-top:5%; margin-left: 20px;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">DBKO CLIENT</span>
-            </div>
-        </button>
-    </div>
+   <div style="display:grid;">
+     <div class="fade" style="display:flex;">
+         <button type="submit" onclick="window.open('dbko_client.zip')">
+             <div style="display:flex">
+                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bfcca197-3578-4aac-affa-0f78c0bac51c/detjt52-fd0e1703-e28e-4cc4-9125-902e94d670a5.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmY2NhMTk3LTM1NzgtNGFhYy1hZmZhLTBmNzhjMGJhYzUxY1wvZGV0anQ1Mi1mZDBlMTcwMy1lMjhlLTRjYzQtOTEyNS05MDJlOTRkNjcwYTUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lWj3fT_-PSKiKkz8Y_W9esdIDtVs_EaHGUf0mHGnWA0" style="max-width: 70px;  display: block; margin-right: 0; border-radius: 10px;;"></img>
+                 <span class="slide" style="margin-top:5%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">DOWNLOAD</span>
+                 <span class="colors" style="margin-top:5%; margin-left: 20px;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">DBKO CLIENT</span>
+             </div>
+         </button>
+     </div>
+     <div class="fade" style="display:flex;">
+         <button type="submit" onclick="window.open('ipchanger.exe')">
+             <div style="display:flex">
+                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bfcca197-3578-4aac-affa-0f78c0bac51c/detjt52-fd0e1703-e28e-4cc4-9125-902e94d670a5.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmY2NhMTk3LTM1NzgtNGFhYy1hZmZhLTBmNzhjMGJhYzUxY1wvZGV0anQ1Mi1mZDBlMTcwMy1lMjhlLTRjYzQtOTEyNS05MDJlOTRkNjcwYTUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lWj3fT_-PSKiKkz8Y_W9esdIDtVs_EaHGUf0mHGnWA0" style="max-width: 70px;  display: block; margin-right: 0; border-radius: 10px;;"></img>
+                 <span class="slide" style="margin-top:5%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">DOWNLOAD</span>
+                 <span class="colors" style="margin-top:5%; margin-left: 20px;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">IP CHANGER</span>
+             </div>
+         </button>
+     </div>
+   </div>
 </div>
 
