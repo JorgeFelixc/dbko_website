@@ -193,16 +193,19 @@ public function create()
 
 		//make items
 		$sid = 100;
-		while ($item = current($cfg['vocations'][$this->attrs['vocation']]['equipment'])){
-			$sid++;
-			$d['player_id']	= $this->attrs['id'];
-			$d['pid']		= key($cfg['vocations'][$this->attrs['vocation']]['equipment']);
-			$d['sid']		= $sid;
-			$d['itemtype']	= $item;
-			
-			if (!$this->myInsert('player_items',$d)) throw new Exception('Player::make() Cannot insert items:<br/>'.$this->getError());
-			unset($d);
-			next($cfg['vocations'][$this->attrs['vocation']]['equipment']);
+		$vocationEquipment = $cfg['vocations'][$this->attrs['vocation']]['equipment'];
+		if(!is_null($vocationEquipment)){
+			while ($item = current($cfg['vocations'][$this->attrs['vocation']]['equipment'])){
+				$sid++;
+				$d['player_id']	= $this->attrs['id'];
+				$d['pid']		= key($cfg['vocations'][$this->attrs['vocation']]['equipment']);
+				$d['sid']		= $sid;
+				$d['itemtype']	= $item;
+				
+				if (!$this->myInsert('player_items',$d)) throw new Exception('Player::make() Cannot insert items:<br/>'.$this->getError());
+				unset($d);
+				next($cfg['vocations'][$this->attrs['vocation']]['equipment']);
+			}
 		}
 
 		//make skills only if not created by trigger

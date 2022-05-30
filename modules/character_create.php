@@ -31,10 +31,11 @@ if ($form->exists()){
 					if ($newplayer->create()){
 						$account->logAction('Created character: '.$form->attrs['name']);
 						//create new message
-						$msg = new IOBox('message');
-						$msg->addMsg('Your character was successfuly created.');
-						$msg->addRefresh('Finish');
-						$msg->show();
+						// $msg = new IOBox('message');
+						// $msg->addMsg('Your character was successfuly created.');
+						// $msg->addRefresh('Finish');
+						// $msg->show();
+						$msg->showNotification("Character Created", 'GZ!', false);
 					}else{$error = 'Error. '.$newplayer->getError();}
 				}else{$error = "This name is already taken.";}
 			}else{$error = "<b>Not a valid name:</b><br/><ul><li>First letter capital</li><li>At least 4 characters, at most 25</li><li>No capital letters in midlle of word</li><li>Letters A-Z, -' and spaces</li><li>Monster names not allowed</li></ul>";}
@@ -42,11 +43,12 @@ if ($form->exists()){
 	}else{$error = "Invalid parameters.";}
 	if (!empty($error)){
 		//create new message
-		$msg = new IOBox('message');
-		$msg->addMsg($error);
-		$msg->addReload('<< Back');
-		$msg->addClose('OK');
-		$msg->show();
+		$msg->showNotification("Error", $error, false);
+		// $msg = new IOBox('message');
+		// $msg->addMsg($error);
+		// $msg->addReload('<< Back');
+		// $msg->addClose('OK');
+		// $msg->show();
 	}
 }else{
 	//make a list of valid vocations
