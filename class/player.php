@@ -194,7 +194,7 @@ public function create()
 		//make items
 		$sid = 100;
 		$existEquipement = is_null($cfg['vocations'][$this->attrs['vocation']]['equipment']);
-		if($existEquipement){
+		if(!$existEquipement){
 			while ($item = current($cfg['vocations'][$this->attrs['vocation']]['equipment'])){
 				$sid++;
 				$d['player_id']	= $this->attrs['id'];
