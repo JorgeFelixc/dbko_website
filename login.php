@@ -76,11 +76,11 @@ include ("header.inc.php");
 		<form id="login" action="login.php?redirect=<?php echo htmlspecialchars($_GET['redirect'])?>" method="post">
 				<div class="wrapper-form size-md">
 					<label>Account Id</label>
-					<input id="account" name="account" type="password" class="textfield" maxlength="8" size="10" tabindex="101" value="<?php echo htmlspecialchars($account);?>"/>
+					<input id="account" name="account" type="password" class="textfield" maxlength="8" size="10" tabindex="101"/>
 				</div>
 				<div class="wrapper-form">
 					<label>Password</label>
-					<input id="password" name="password" type="password" class="textfield" maxlength="100" size="10" tabindex="102" value="<?php echo htmlspecialchars($password);?>"/>
+					<input id="password" name="password" type="password" class="textfield" maxlength="100" size="10" tabindex="102" />
 				</div>
 				<div class="wrapper-actions">
 					<div class="wrapper-remember">
@@ -104,8 +104,6 @@ include ("header.inc.php");
 			</form>
 		</div>
 		<div id="wrapper-register" class="wrapper-login">
-			<!-- <h1>Want a new account?</h1>
-			<button class="btn-secondary" onclick="javascript:ajax('wrapper-register','/modules/account_create.php', '' ,true)">Create a new account</button> -->
 			
 			<h1>Create Account</h1>
 			<form id="newaccount" action="javascript:ajax('wrapper-register','/modules/account_create.php',getParamsByName('createacc'),true)" method="post">
@@ -130,25 +128,6 @@ include ("header.inc.php");
 			</div>
 			</form>
 
-			<!-- FETCJH?? -->
-			<!-- <h1>Create Account</h1>
-			<form id="createacc">
-			<div class="wrapper-form">
-				<label>Email</label>			
-				<input class="textfield" id="newaccount__email" name="create_acc" type="text" maxlength="100" value="">
-			</div>	
-			<div class="wrapper-form">
-				<label>Password</label>
-				<input class="textfield" id="newaccount__password" name="create_acc" type="password" maxlength="100" value="">
-			</div>	
-			<div class="wrapper-form">
-				<label>Confirm your Password</label>
-				<input class="textfield" id="newaccount__confirm" name="create_acc" type="password" maxlength="100" value="">
-			</div>
-			<div class="wrapper-actions">
-				<input class="btn-secondary" type="button"  name="register_submit" onclick="javascript:postForm('/modules/account.php?', 'create_acc')"  value="Next >>"> 
-			</div>
-			</form> -->
 		</div>
 			<!-- <fieldset>
 				<legend>More Options</legend>

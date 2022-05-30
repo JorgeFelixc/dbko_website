@@ -288,6 +288,10 @@ const showTransition = (element) => {
   element.style.transform = "translateX(0px)";
 };
 
+/**
+ * Method to render a notification and auto manage.
+ * @param {string} body HTML string body to render
+ */
 const makeNotification = (body) => {
   const fatherName = "master-notification";
   const fatherBox = document.getElementById(fatherName);

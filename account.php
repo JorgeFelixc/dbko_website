@@ -29,11 +29,11 @@ include ("header.inc.php");
 ?>
 <div id="content">
     <div class="top">
-        <h1>Welcome to <?php $ptitle ?>!</h1>
+        <h1>Welcome to your Account</h1>
     </div>
-    <div class="mid">
+    <div class="mid wrapper-section">
 
-        <h3>Actions to do</h3>
+        <h3>Select your action</h3>
         <div class="column py-child">
             <button class="btn-secondary" onclick="ajax('acc-creation','modules/character_create.php','',true)">Create a character</button>
             <button class="btn-secondary" onclick="ajax('acc-creation','modules/character_delete.php','',true)">Delete a character</button>
@@ -57,10 +57,9 @@ include ("header.inc.php");
     </div>
 
 </div>
+<!-- Character creation form. -->
 <div class="wrapper-common" id="acc-creation">
-
-
-<form id="character"
+  <form id="character"
     action="javascript:ajax('wrapper-register','/modules/character_create.php',getParamsByName('createchar'),true)"
     method="post">
     <h1>Create Character</h1>
@@ -104,7 +103,7 @@ include ("header.inc.php");
           <option value="1">Small city</option>
         </select>
     </div>
-
+    <div class="divider"></div>
     <!-- <input style="width: 100px; height: 25px;"
       onclick="document.getElementById('iobox').style['visibility'] = 'hidden'" type="button" value="Cancel"> -->
     <div class="wrapper-actions">
@@ -117,14 +116,17 @@ include ("header.inc.php");
 <div class="wrapper-common left-auto">
 <?php 
         if (isset($account->players)){
-            echo '<h3>Characters</h3>'."\n";
-            echo '<div class="wrapper-characters">';
+            echo '<h1>Characters</h1>'."\n";
+            echo '<div class="wrapper-character">';
             foreach ($account->players as $player){
                 $nameVoc = $cfg['vocations'][$player['vocation']]['name'];
                 echo '
-                <div class="row" onclick="window.location.href=\'characters.php?player_id='.htmlspecialchars($player['id']).'\'">
+                <div class="row box-character" onclick="window.location.href=\'characters.php?player_id='.htmlspecialchars($player['id']).'\'">
                 <img src="Fotos/vocs/'.$nameVoc.'.gif"/>
-                <p>'.htmlspecialchars($player['name']).'</p>
+                <div class="column">
+                  <p>'.htmlspecialchars($player['name']).'</p>
+                  <p class="sub-text">'.$nameVoc.'</p>
+                </div>
                 </div>';
             }
             echo '</div>';
