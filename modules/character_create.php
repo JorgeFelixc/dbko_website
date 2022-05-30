@@ -31,7 +31,7 @@ if ($form->exists()){
 					if ($newplayer->create()){
 						$account->logAction('Created character: '.$form->attrs['name']);
 						//create new message
-						// $msg = new IOBox('message');
+						$msg = new IOBox('message');
 						// $msg->addMsg('Your character was successfuly created.');
 						// $msg->addRefresh('Finish');
 						// $msg->show();
@@ -43,8 +43,8 @@ if ($form->exists()){
 	}else{$error = "Invalid parameters.";}
 	if (!empty($error)){
 		//create new message
+		$msg = new IOBox('message');
 		$msg->showNotification("Error", $error, false);
-		// $msg = new IOBox('message');
 		// $msg->addMsg($error);
 		// $msg->addReload('<< Back');
 		// $msg->addClose('OK');
