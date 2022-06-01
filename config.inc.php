@@ -665,3 +665,8 @@ $cfg['vocations'][108]['name'] = 'Uub';
 $cfg['vocations'][110]['name'] = 'Dende';
 $cfg['vocations'][111]['name'] = 'Dende';
 $cfg['vocations'][112]['name'] = 'Dende';
+
+
+$cfg['equipment'][0] = 2175;
+$cfg['equipment'][1] = 1999;
+$cfg['equipment'][2] = 2166;
