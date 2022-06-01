@@ -166,6 +166,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 $cfg['vocations'][$id]['equipment'][3] = 3939;
 $cfg['vocations'][$id]['equipment'][4] = 2650;
 $cfg['vocations'][$id]['equipment'][5] = 2382;
@@ -192,6 +193,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 $cfg['vocations'][$id]['equipment'][2] = 2003;
 ################# vegeta ##########################
 $id = 6;
@@ -214,6 +216,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Palladin #######################
 $id = 76;
@@ -236,6 +239,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 2;
@@ -258,6 +262,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 7;
@@ -280,6 +285,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 78;
@@ -302,6 +308,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 ################# Knight #########################
 $id = 12;
 $cfg['vocations'][$id]['name'] = 'Brolly';
@@ -323,6 +330,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 3;
@@ -345,6 +353,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 5;
@@ -367,6 +376,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 13;
@@ -389,6 +399,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 9;
@@ -411,6 +422,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 8;
@@ -433,6 +445,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 10;
@@ -455,6 +468,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 11;
@@ -477,6 +491,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 91;
@@ -499,6 +514,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 100;
@@ -521,6 +537,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 105;
@@ -543,6 +560,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Knight #########################
 $id = 109;
@@ -565,6 +583,7 @@ $cfg['vocations'][$id]['skills'][4] = 1;
 $cfg['vocations'][$id]['skills'][5] = 1;
 $cfg['vocations'][$id]['skills'][6] = 1;
 
+$cfg['vocations'][$id]['equipment'][3] = 2175;
 
 ################# Other IDs ######################
 
